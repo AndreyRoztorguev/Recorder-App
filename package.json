@@ -1,0 +1,23 @@
+{
+  "name": "record-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrey Roztorguev <andrew.roztor99@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --no-source-map --watch public/style.scss:public/style.css",
+    "server": "open-cli http://localhost:3000 && nodemon index.js",
+    "start": "concurrently \"yarn sass\" \"yarn server\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15",
+    "open-cli": "^7.0.1",
+    "sass": "^1.44.0"
+  }
+}
